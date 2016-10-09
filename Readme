@@ -1,0 +1,16 @@
+编译步骤：
+1.使用mingw-get-setup.exe安装mingw,确认安装gcc g++ 以及pthread(dev)
+2.从github clone 项目到本地 $ git clone --recursive https://github.com/alidalee/skynet-mingw.git g:/github/skynet-mingw
+3.双击 运行MinGW\msys\1.0\msys.bat
+4.cd 到skynet-mingw所在的目录g:/github/skynet-mingw
+5. 输入 sh ./prepare.sh 运行
+6. 输入 make 运行
+   如果编译时提示error: conflicting types for 'clock_getttime' in clock_gettime...
+   在platform/platform.h中添加#include <pthread.h>
+   
+   如果在编译时提示undefined reference to 'getaddrinfo'...
+   在sys/socket.h中，#ifndef _WIN32_WINNT前一行,添加#undef _WIN32_WINNT
+
+测试运行：
+1.cd 到skynet-mingw所在的目录g:/github/skynet-mingw
+2.输入./skynet.exe examples/config 运行
