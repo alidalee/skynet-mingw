@@ -2,6 +2,7 @@
 #define PLATFORM_H
 
 #include <unistd.h>
+#include <pthread.h>
 #include <stdbool.h>
 #include "sys/socket.h"
 
