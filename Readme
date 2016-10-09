@@ -9,7 +9,7 @@
    在platform/platform.h中添加#include <pthread.h>
    
    如果在编译时提示undefined reference to 'getaddrinfo'...
-   在sys/socket.h中，#ifndef _WIN32_WINNT前一行,添加#undef _WIN32_WINNT
+   在platform/sys/socket.h中，#ifndef _WIN32_WINNT前一行,添加#undef _WIN32_WINNT
 
 测试运行：
 1.cd 到skynet-mingw所在的目录g:/github/skynet-mingw
