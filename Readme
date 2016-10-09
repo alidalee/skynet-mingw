@@ -13,4 +13,4 @@
 
 测试运行：
 1.cd 到skynet-mingw所在的目录g:/github/skynet-mingw
-2.输入./skynet.exe examples/config 运行
+2.输入./skynet.exe examples/config 运行。
